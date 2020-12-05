@@ -1,0 +1,15 @@
+스프링 프로퍼티 설정하기
+*반드시 java에서 setter() 를 생성해주어야 xml에서 객체를 주입할수있다.
+
+1) arrayList 타입은 
+<list>
+	<value>1</value>
+	<value>1</value>
+	<value>1</value>
+</list>
+로 명시해준다.
+
+2)다른 Bean 객체 참조시
+<property name="exRef">
+	<ref bean="exRef">
+</property>
