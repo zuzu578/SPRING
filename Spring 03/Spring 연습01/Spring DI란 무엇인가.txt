@@ -1,0 +1,30 @@
+spring ==> xml 문서에서 객체를 생성 (bean)
+ex)
+spring DI의 특징
+
+java
+
+public class MyCalculator claculator;
+private int firstNum;
+private int secondNum;
+
+xml
+<property name = "firstNum" value="10">
+<property name = "secondNum value="20">
+==>DI(Dependency Injection)를 XML에서 해주고있다.
+==>자바에서 객체를 주입해주는방법도 있는데 XML에서 해줌으로서 코드를 줄일수있고, 역할을 분담할수있다(MVC패턴)
+
+int firstNum과 int secondNum의 값을 xml에서 주고있음/
+
+외부에서 Bean 을 만들어놓고 주입하는 방식이다.(외부=XML)
+
+XML의 이해
+(<bean id 는 변수를 설정해주는것)<bean id="calculator" class="com.javalec.ex.Calculator"> ==>객체 생성
+
+<property name="calculator"> ==> 필드설정
+	<ref bean = "calculator">
+</property>
+//(이것이 가능한이유는 필드에 대한 setter()가 있기때문이다.)
+<property name = "firstNum value="10"> </property>
+<property name = "secondNum value="10"> </property>
+==>외부에서 값을 주입해주고 있다.

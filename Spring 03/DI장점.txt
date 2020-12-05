@@ -1,0 +1,19 @@
+DI 활용
+Dependency Injection ==> 의존주입
+의존주입 방식
+1)constructor() , setter(),xml injection
+2)java file injection
+
+constructor()를 사용할땐 (xml <constructor-arg>)사용
+
+Spring장점
+java 파일 수정없이 스프링 설정 파일만을 수정하여 부품을 생성 조립가능
+
+
+
+
+
+
+
+
+
