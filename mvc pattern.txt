@@ -1,0 +1,10 @@
+MVC 패턴
+M(Model)V(View)C(Controller)
+Client 요청을 dispatcherservlet
+에서 받고 처리를 controller에서함
+받을때 매핑을 해주는데 , web.xml에서 보냄
+그리고 작업후 알아서 컨트롤러에 전달 
+View ==>최종적으로 클라이언트에게 응답을 해줌
+결론은 처음에 web.xml에 dispatcherservlet 에서 매핑해주고 컨트롤
+러에 전달
+
