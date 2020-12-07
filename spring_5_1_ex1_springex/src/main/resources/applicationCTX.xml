@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="student1" class="com.javalec.ex.Student">
+		
+		<constructor-arg>
+			<value>홍길동</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>10살</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>3학년</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>20번</value>
+		</constructor-arg>
+	  
+	  <!-- setter DI방식 -->
+		<property name="name" value="홍길동"/>
+		<property name="age" value="10"/>
+		<property name="gradeNum" value="3"/>
+		<property name="classNum" value="20"/>
+	</bean>
+	
+	<bean id="student2" class="com.javalec.ex.Student">
+		<constructor-arg value="홍길동" />
+		<constructor-arg value="9살" />
+		<constructor-arg value="2학년" />
+		<constructor-arg value="10번" />
+	</bean>
+	
+	<bean id="studentInfo" class="com.javalec.ex.StudentInfo">
+		<constructor-arg>
+			<ref bean="student1" />
+		</constructor-arg>
+	</bean>
+	
+</beans>
